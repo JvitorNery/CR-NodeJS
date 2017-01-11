@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>crud node</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+
+		<ul class="quotes">
+		  <% for(var i=0; i<quotes.length; i++) {%>
+		    <li class="quote">
+		      <span><%= quotes[i].name %></span>
+		      <span><%= quotes[i].quote %></span>
+		    </li>
+		  <% } %>
+		</ul>
+	
+		<fieldset>
+			<legend>form create<legend>
+			<form action="create" method="post" class="form-create">
+			<label><input type="text" required name="message" /></label>
+			<label><input type="text" required name="data" /></label>
+			<label><input type="submit" value="enviar"/></label>
+			</form>
+		</fieldset>
+	</body>
+</html>
